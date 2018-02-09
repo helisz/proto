@@ -1,0 +1,169 @@
+// DEFINITIONS
+$radius: 0px !default;
+
+$gray: #F4F4F4 !default;
+$bg-color: $gray !default;
+
+$black: #22282D !default;
+$black-lighter: lighten( $black, 20% );
+$black-darker: darken( $black, 20% );
+
+$primary-color: #FFF !default;
+$primary-color-lighter: lighten( $primary-color, 20% );
+$primary-color-darker: darken( $primary-color, 5% );
+$primary-color-light: #EFF3F5;
+
+$secondary-color: #65E3E7 !default;
+$secondary-color-lighter: lighten( $secondary-color, 20% );
+$secondary-color-darker: darken( $secondary-color, 20% );
+
+$text-color: $primary-color !default;
+$text-color-lighter: #969AAA;
+$text-color-darker: darken( $primary-color, 20% );
+
+$border-color: #E3E3E3 !default;
+
+$text-serif: "Source Sans Pro", "PingFangSC-Regular", "Microsoft YaHei",	"WenQuanYi Micro Hei", sans-serif !default;
+
+$text-sans: "Montserrat", "PingFangSC-Regular", "Microsoft YaHei",
+	"WenQuanYi Micro Hei", serif !default;
+
+// define color
+.bg-gray{
+	background-color: $gray;
+}
+.bg-white{
+	background-color: white;
+}
+.bg-primary{
+	background-color: $primary-color !important;
+}
+.bg-secondary{
+	background-color: $secondary-color;
+}
+.text-normal{
+	font-weight: 400 !important;
+}
+.text-bold{
+	font-weight: bold !important;
+}
+.text-lighter{
+	font-weight: lighter !important;
+}
+.text-bolder{
+	font-weight: bolder !important;
+}
+
+.text-gray{
+	color: #AAA;
+}
+.text-primary{
+	color: $primary-color !important;
+}
+.text-secondary{
+	color: $secondary-color !important;
+}
+.box-radius{
+	border-radius: 5px;
+}
+
+@mixin transition($transition) {
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-ms-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}
+
+@mixin tilt{
+	&:before{
+		content: "";
+		z-index: -1;
+		background-color: $primary-color;
+		-ms-transform: skew(-10deg,0deg); /* IE 9 */
+		-webkit-transform: skew(-10deg,0deg); /* Safari */
+		transform: skew(-10deg,0deg); /* Standard syntax */
+		position: absolute;
+		top: 0;
+		left: -5px;
+		right: -5px;
+		bottom: 0;
+	}
+}
+@mixin tilt-shape{
+	&:before{
+		content: "";
+		z-index: -1;
+		-ms-transform: skew(-10deg,0deg); /* IE 9 */
+		-webkit-transform: skew(-10deg,0deg); /* Safari */
+		transform: skew(-10deg,0deg); /* Standard syntax */
+		position: absolute;
+		top: 0;
+		left: 5px;
+		right: 5px;
+		bottom: 0;
+	}
+}
+
+
+@mixin primary-gradient {
+	background: rgb(27,61,76);
+	background: -moz-linear-gradient(top, rgba(27,61,76,1) 0%, rgba(36,79,98,1) 100%);
+	background: -webkit-linear-gradient(top, rgba(27,61,76,1) 0%,rgba(36,79,98,1) 100%);
+	background: linear-gradient(to bottom, rgba(27,61,76,1) 0%,rgba(36,79,98,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b3d4c', endColorstr='#244f62',GradientType=0 );
+}
+
+@mixin secondary-gradient {
+	background: rgb(80,193,205);
+	background: -moz-linear-gradient(top, rgba(80,193,205,1) 0%, rgba(101,227,231,1) 100%);
+	background: -webkit-linear-gradient(top, rgba(80,193,205,1) 0%,rgba(101,227,231,1) 100%);
+	background: linear-gradient(to bottom, rgba(80,193,205,1) 0%,rgba(101,227,231,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#50c1cd', endColorstr='#65e3e7',GradientType=0 );
+}
+
+
+$screen-sm-min: 768px;
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-md-min: 992px;
+$screen-sm-max: ($screen-md-min - 1);
+$screen-lg-min: 1200px;
+$screen-md-max: ($screen-lg-min - 1);
+
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+$rotating-speed: 200s !default;
+.rotating {
+  -webkit-animation: rotating $rotating-speed linear infinite;
+  -moz-animation: rotating $rotating-speed linear infinite;
+  -ms-animation: rotating $rotating-speed linear infinite;
+  -o-animation: rotating $rotating-speed linear infinite;
+  animation: rotating $rotating-speed linear infinite;
+}

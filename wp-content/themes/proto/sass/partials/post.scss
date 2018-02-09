@@ -1,0 +1,21 @@
+.post-template{
+	h1{
+		font-size: 3.4em;
+		line-height: 115%;
+	}
+	.post-thumbnail img{
+		max-width: 140px;	
+	}
+	.entry-header{
+		.entry-title{
+			margin-bottom: 0;
+		}
+		.entry-meta{
+			text-transform: uppercase;
+			font-size: 0.8em;
+			a{
+				color: white;
+			}
+		}
+	}
+}

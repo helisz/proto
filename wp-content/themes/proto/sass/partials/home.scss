@@ -1,0 +1,63 @@
+.home-page{
+	padding: 30px 0;
+	min-height: 600px;
+}
+
+.big-icon{
+	padding: 0 20px 0 0;
+	border-right: 10px solid white;
+	img{
+		width: 100%;
+	}
+}
+
+.home-post-list{
+	.post-cat{
+		opacity: 0.4;
+		padding: 0 0 10px 0;
+		font-weight: bold;
+		text-transform: uppercase;
+
+	}
+	.post-item-list{
+		margin-bottom: 20px;
+		a.post-item{
+			margin: 0 -10px 0 -10px;
+			display: block;
+			background: transparent;
+			overflow: hidden;
+			padding: 10px;		
+			@include transition(all 0.2s ease-in-out);
+			&:hover{
+				background: rgba(255,255,255,0.1);
+			}
+
+			.icon {
+				float: left;
+				width: 120px;
+				img{
+					width: 120px;
+					margin-right: 10px;
+				}
+			}
+			.content{
+				margin-left: 130px;
+				.title {
+					color: white;
+					font-family: $text-sans;
+					font-size: 1.4em;
+					font-weight: bold;
+					padding: 5px 0;
+					line-height: 115%;
+				}
+				.date{
+					opacity: 0.5;
+					color: white;
+					font-size: 0.8em;
+					text-transform: uppercase;
+				}
+			}
+		}
+		
+	}
+}

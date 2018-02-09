@@ -1,0 +1,263 @@
+// header styles
+.mainmenu{
+	text-align: right;
+	#submenu{
+		display: inline-block;
+		float: none;
+		ul{
+			li.menu-item{
+				a{
+					font-size: 16px;
+					color: $primary-color;
+				}
+			}
+		}
+	}
+}
+
+.main-custom-menu{
+	background: lighten($primary-color, 5%);
+	padding: 0;
+	// margin: 0 0 20px 0;
+}
+
+nav.navbar{
+	border-bottom: 1px solid white;
+	margin-bottom: 20px;
+	.navbar-brand{
+		padding: 0;
+		margin: 20px 0;
+		a{
+			img{
+				height: 50px;
+				width: auto;
+			}
+		}
+	}
+	.navbar-nav{
+		.nav-link{
+			color: $primary-color;
+			font-family: $text-serif;
+			text-transform: uppercase;
+		}
+	}
+}
+
+header#masthead{
+	margin-bottom: 0;
+	background-color: $black;
+	box-shadow: none;
+	padding: 0;
+	border-bottom: white;
+	.navbar{	
+		margin: 0;
+		ul.navbar-nav {
+			margin: 0; 
+			padding: 0; 
+			position: relative;
+			float: right;
+			> li.menu-item{
+				display: block;
+				float: left;
+				height: 100px; 
+				margin: 0; padding: 0; 
+				position: relative; 
+				> a{
+					display: block;
+					height: 100px;
+					line-height: 100px;
+					padding: 0px 10px;
+					font-weight: 500;
+					text-transform: uppercase;
+					color: $primary-color;
+					font-size: 0.8em;
+					text-decoration: none;
+					@include transition(all 0.2s ease-in-out);
+					&:hover{
+						background: $primary-color-light;
+					}
+					&:before{
+						background-color: transparent;
+					}
+				}
+				&:hover{
+					a{
+						font-weight: normal;
+						&:before{background-color: $primary-color !important;}
+					}
+					&.current-menu-item{
+						> a:before{
+							background-color: darken($secondary-color, 3%) !important;
+						}
+					}
+					> ul {
+						display: block; 
+					}
+				}
+				&.menu-item-home{
+					> a:before{
+						background-color: $primary-color !important;
+					}
+				}
+
+				&.current-menu-item, 
+				&.current-category-ancestor,
+				&.current-category-ancestor .current-menu-item{				
+					> a:before{
+						background-color: darken($secondary-color, 3%);
+					}
+				}
+
+			}
+			ul{
+				display: none; 
+				position: absolute;
+				list-style: none;
+				margin: 0; 
+				padding: 0; 
+				top: 100px; 
+				left: 0;
+				background: white;
+				z-index: 10;
+				li{
+					float: none; 
+					width: 200px;
+					text-align: left;
+					background-color: lighten($primary-color, 10%);
+					a{
+						padding: 15px 10px;
+						width: 100%;
+						display: block;
+						background: white;
+						color: $primary-color;
+						font-size: 1em;
+					}
+					&:hover{
+						a{
+							background-color: $primary-color-light;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.current-menu-item a, #main-nav .current_page_item a, #main-nav a:hover {
+		color: #000;
+		background: #ccc;
+	}
+}
+
+
+@media (max-width: $screen-xs-max){
+	header#masthead{
+		nav.navbar{
+			padding: 20px 0;
+			.navbar-brand{
+				margin-top: 7px;
+				a{
+					img{
+						height: 30px;
+						width: auto;
+					}
+				}
+			}
+			button.navbar-toggler{
+				float: right;
+				font-size: 0.6em;
+				padding: 8px 12px;
+				border-radius: 0px;
+				margin-top: 6px;
+			}
+			.navbar-collapse{
+				clear: both;
+				margin: 0;
+				position: absolute;
+				z-index: 1;
+				left: -16px;
+				right: -16px;
+				top: 78px;
+				background: rgba(255,255,255,0.95);
+				.navbar-nav{
+					width: 100%;
+					> li{
+						float: none !important;
+						display: block;
+						height: auto !important;
+						a{
+
+							height: auto !important;
+							line-height: 50px;
+						}
+						> ul{
+							position: relative;
+							width: 100%;
+							top: 0;
+							height: auto;
+							background: #EEDDCC;
+							li{
+								height: 40px;
+								width: 100%;
+								a{    
+									padding: 0 10px 0 50px;
+									line-height: 40px;
+									height: 40px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+.general-header{
+	position: relative;
+	.general-header-content{
+		padding-top: 140px;
+		padding-bottom: 140px;
+		.container{
+			.title{
+				font-size: 3.6em;
+				font-weight: 600;
+				line-height: 1.2;
+
+			}
+			.subtitle{
+				font-size: 0.8em;
+				text-transform: uppercase;
+				letter-spacing: 5px;
+			}
+			.content, .content p{
+				margin-top: 20px;
+				line-height: 165%;
+				opacity: .75;
+			}
+			p{
+				margin: 0;
+			}
+
+		}
+
+		&.white-content{
+			.title, .subtitle, .content, .content p{
+				color: white;
+			}
+		}
+		&.white-content{
+			.button{
+				color: $primary-color;
+				background: white;	
+				text-decoration: none !important;
+				&:hover{		
+					background: lighten($primary-color, 55%);
+
+				}	
+			}
+		}
+	}
+}
+
