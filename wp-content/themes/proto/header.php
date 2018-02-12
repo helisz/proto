@@ -25,23 +25,34 @@
 
 <body <?php body_class(); ?>>
     <div id="page" class="site">
-       <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-bootstrap-starter' ); ?></a>
-       <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
-           <header class="site-header navbar-static-top <?php echo wp_bootstrap_starter_header_class(); ?>" role="banner">
+     <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-bootstrap-starter' ); ?></a>
+     <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
+         <header class="site-header navbar-static-top <?php echo wp_bootstrap_starter_header_class(); ?>" role="banner">
             <div class="container">
-                <nav class="navbar navbar-expand-xl p-0">
+                <nav class="navbar navbar-expand-sm p-0">
                     <div class="navbar-brand">
-                        <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
+                       <!--  <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
                             <a href="<?php echo esc_url( home_url( '/' )); ?>">
                                 <img src="<?php echo esc_attr(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
                             </a>
                         <?php else : ?>
                             <a class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>"><?php esc_url(bloginfo('name')); ?></a>
-                        <?php endif; ?>
+                        <?php endif; ?> -->
+                        <a class="brand-logo" href="<?php echo esc_url( home_url( '/' )); ?>">
+                            <div class="square">
+                                <img src="<?php echo get_site_url(); ?>/wp-content/uploads/2018/02/logo_shape1.svg">
+                            </div>
+                            <div class="logo">
+                                <img src="<?php echo get_site_url(); ?>/wp-content/uploads/2018/02/logo_shape2.svg">
+                            </div>
+                            <div class="desc-wrapper">
+                                <img src="<?php echo get_site_url(); ?>/wp-content/uploads/2018/02/logo_shape3.svg">
+                            </div>
+                        </a>
 
                     </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <button class="navbar-toggler" style="background:transparent;" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class=""><img src="<?php echo get_site_url(); ?>/wp-content/uploads/2018/02/bread.svg" style="width:40px;"></span>
                     </button>
 
                     <?php
@@ -66,5 +77,5 @@
         <?php endif; ?>
         <div id="content" class="site-content">
           <div class="container">
-             <div class="row">
-             <?php endif; ?>
+           <div class="row">
+           <?php endif; ?>

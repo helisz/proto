@@ -77,6 +77,9 @@ body {
 .content-area {
   width: 100%; }
 
+a {
+  color: #439eff; }
+
 h1, h2, h3,
 h1.widget-title, h3.sidetitle {
   color: #FFF;
@@ -109,7 +112,8 @@ a, a:hover, a:visited, a:focus {
   position: relative;
   width: 100%;
   height: 0;
-  margin: 30px 0; }
+  margin: 30px 0;
+  padding-top: 62.5%; }
 
 .iframe-wrapper iframe {
   position: absolute;
@@ -120,6 +124,9 @@ a, a:hover, a:visited, a:focus {
 
 .iframe-wrapper.iframe-1366 {
   padding-top: 56.223%; }
+
+.iframe-wrapper.iframe-1280, .iframe-wrapper.iframe-1440 {
+  padding-top: 62.5%; }
 
 .image-bg {
   background-repeat: no-repeat;
@@ -294,6 +301,66 @@ button.button-white:hover, a.button.button-white:hover {
   background: white;
   padding: 0; }
 
+.brand-logo {
+  position: relative;
+  display: block;
+  width: 223px;
+  height: 65px; }
+
+.brand-logo .square {
+  float: left; }
+
+.brand-logo .square img {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  width: 65px; }
+
+.brand-logo .logo {
+  position: absolute;
+  left: 70px;
+  top: 20px;
+  width: 148px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+.brand-logo .logo img {
+  width: 148px; }
+
+.brand-logo .desc-wrapper {
+  position: absolute;
+  left: 70px;
+  top: 38px;
+  height: 16px;
+  width: 98px;
+  overflow: hidden; }
+
+.brand-logo .desc-wrapper img {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  left: 0px;
+  top: -16px;
+  width: 98px; }
+
+.brand-logo:hover .square img {
+  transform: scale(1.03); }
+
+.brand-logo:hover .logo {
+  top: 10px; }
+
+.brand-logo:hover .desc-wrapper img {
+  width: 98px;
+  top: 0px; }
+
 nav.navbar {
   border-bottom: 1px solid white;
   margin-bottom: 20px; }
@@ -301,10 +368,6 @@ nav.navbar {
 nav.navbar .navbar-brand {
   padding: 0;
   margin: 20px 0; }
-
-nav.navbar .navbar-brand a img {
-  height: 50px;
-  width: auto; }
 
 nav.navbar .navbar-nav .nav-link {
   color: #FFF;
@@ -615,16 +678,32 @@ footer.site-footer .footer-bottom .bottom-menu ul.menu li a:hover {
 .home-post-list .post-item-list a.post-item:hover {
   background: rgba(255, 255, 255, 0.1); }
 
+.home-post-list .post-item-list a.post-item:hover .icon img {
+  transform: scale(1.22); }
+
+.home-post-list .post-item-list a.post-item:hover .content {
+  padding-left: 20px; }
+
 .home-post-list .post-item-list a.post-item .icon {
   float: left;
   width: 120px; }
 
 .home-post-list .post-item-list a.post-item .icon img {
   width: 120px;
-  margin-right: 10px; }
+  margin-right: 10px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
 
 .home-post-list .post-item-list a.post-item .content {
-  margin-left: 130px; }
+  margin-left: 130px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
 
 .home-post-list .post-item-list a.post-item .content .title {
   color: white;

@@ -20,6 +20,9 @@ body{
 	width: 100%;
 }
 
+a{
+	color: #439eff;
+}
 h1, h2, h3,
 h1.widget-title, h3.sidetitle
 {
@@ -60,6 +63,7 @@ a, a:hover, a:visited, a:focus{
 	width: 100%;
 	height: 0;
 	margin: 30px 0;
+	padding-top: 62.5%;
 	iframe {
 		position: absolute;
 		width: 100%;
@@ -70,8 +74,11 @@ a, a:hover, a:visited, a:focus{
 	&.iframe-1366{
 		padding-top: 56.223%;
 	}
-}
 
+	&.iframe-1280, &.iframe-1440{
+		padding-top: 62.5%;
+	}
+}
 
 
 .image-bg{
