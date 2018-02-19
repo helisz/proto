@@ -64,11 +64,6 @@ get_header();
 
 	</div>
 
-	<!-- 	<?php get_template_part( 'template-parts/template-home-slider', '' ); ?>
-
-		<?php get_template_part( 'template-parts/template-home-prdmenu', '' ); ?>
-
-		<?php get_template_part( 'template-parts/template-flexible-area', '' ); ?> -->
 
 	</main><!-- #main -->
 </section><!-- #primary -->
