@@ -83,7 +83,8 @@ a {
 h1, h2, h3,
 h1.widget-title, h3.sidetitle {
   color: #FFF;
-  border: none; }
+  border: none;
+  font-family: "Montserrat", "PingFangSC-Regular", "Microsoft YaHei", "WenQuanYi Micro Hei", serif; }
 
 h1 {
   border: none; }
