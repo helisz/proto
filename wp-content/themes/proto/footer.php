@@ -17,7 +17,7 @@
     <?php get_template_part( 'footer-widget' ); ?>
 	<footer class="site-footer container" role="contentinfo">
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-12 footer-desc text-xs">
 				Chrishe @ CITIC TELECOM. 2018
 			</div>
 		</div>

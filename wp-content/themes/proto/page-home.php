@@ -28,7 +28,7 @@ get_header();
 
 								foreach ($cats as $cat) {
 									$cat_id= $cat->term_id;
-									echo "<div class='post-item-list'>";
+									echo "<div class='post-item-list p-sm'>";
 									echo "<div class='post-cat'>".$cat->name."</div>";
 									query_posts("cat=$cat_id&posts_per_page=100");
 									if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -47,25 +47,25 @@ get_header();
 											<div class="date">Update: <?php echo get_the_date(); ?></div>	
 										</div>							
 									</a>
-									<?php endwhile; endif; ?>
-								</div>
-								<?php } // done the foreach statement ?>
-
+								<?php endwhile; endif; ?>
 							</div>
+							<?php } // done the foreach statement ?>
 
 						</div>
 
-					</div><!-- #content -->
-				</div><!-- #container -->
+					</div>
+
+				</div><!-- #content -->
+			</div><!-- #container -->
 
 
-			</div>
 		</div>
-
 	</div>
 
+</div>
 
-	</main><!-- #main -->
+
+</main><!-- #main -->
 </section><!-- #primary -->
 
 <?php

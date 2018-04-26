@@ -7,7 +7,7 @@
 	padding: 0 20px 0 0;
 	border-right: 10px solid white;
 	img{
-		width: 100%;
+		width: 60%;
 	}
 }
 
@@ -31,7 +31,7 @@
 			&:hover{
 				background: rgba(255,255,255,0.1);
 				.icon img{
-					transform:scale(1.22);
+					transform:scale(1.1);
 				}
 				.content{
 					padding-left: 20px;
@@ -40,21 +40,21 @@
 
 			.icon {
 				float: left;
-				width: 120px;
+				width: 60px;
 				img{
-					width: 120px;
+					width: 60px;
 					margin-right: 10px;
 					@include transition(all 0.2s ease-in-out);
 				}
 			}
 			.content{
-				margin-left: 130px;
+				margin-left: 70px;
 				@include transition(all 0.2s ease-in-out);
 				.title {
 					color: white;
 					font-family: $text-sans;
 					font-size: 1.4em;
-					font-weight: bold;
+					font-weight: 300;
 					padding: 5px 0;
 					line-height: 115%;
 				}

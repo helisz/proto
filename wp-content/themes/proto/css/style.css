@@ -69,10 +69,10 @@ body {
   background: #22282D;
   color: #FFF;
   font-size: 16px;
-  font-family: "Source Sans Pro", "PingFangSC-Regular", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; }
+  font-family: -apple-system, BlinkMacSystemFont, "Source Sans Pro", Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif; }
 
 .text-sans {
-  font-family: "Montserrat", "PingFangSC-Regular", "Microsoft YaHei", "WenQuanYi Micro Hei", serif; }
+  font-family: -apple-system, BlinkMacSystemFont, "Montserrat", Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif; }
 
 .content-area {
   width: 100%; }
@@ -363,7 +363,7 @@ button.button-white:hover, a.button.button-white:hover {
   top: 0px; }
 
 nav.navbar {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #666;
   margin-bottom: 20px; }
 
 nav.navbar .navbar-brand {
@@ -558,7 +558,7 @@ footer.site-footer {
   padding: 30px 0;
   background: #22282D;
   color: #FFF;
-  border-top: 1px solid white; }
+  border-top: 1px solid #666; }
 
 footer.site-footer .footer-content {
   padding: 4em 0; }
@@ -568,7 +568,8 @@ footer.site-footer .footer-content .logo {
   width: auto; }
 
 footer.site-footer .footer-desc {
-  opacity: 0.6; }
+  opacity: 0.6;
+  font-family: "Montserrat", "PingFangSC-Regular", "Microsoft YaHei", "WenQuanYi Micro Hei", serif; }
 
 footer.site-footer .footer-logo-text {
   opacity: 0.6; }
@@ -628,8 +629,9 @@ footer.site-footer .footer-bottom .bottom-menu ul.menu li a:hover {
   opacity: 1; }
 
 .post-template h1 {
-  font-size: 3.4em;
-  line-height: 115%; }
+  font-size: 2.4em;
+  line-height: 115%;
+  font-weight: 300; }
 
 .post-template .post-thumbnail img {
   max-width: 140px; }
@@ -644,6 +646,25 @@ footer.site-footer .footer-bottom .bottom-menu ul.menu li a:hover {
 .post-template .entry-header .entry-meta a {
   color: white; }
 
+.nav-links {
+  border-top: 1px solid #666;
+  padding: 30px 0 0 0; }
+
+.nav-links .nav-previous a, .nav-links .nav-next a {
+  border: 0px;
+  background: black;
+  border-radius: 0;
+  color: white;
+  padding: 20px 40px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+.nav-links .nav-previous a:hover, .nav-links .nav-next a:hover {
+  color: black; }
+
 .home-page {
   padding: 30px 0;
   min-height: 600px; }
@@ -653,7 +674,7 @@ footer.site-footer .footer-bottom .bottom-menu ul.menu li a:hover {
   border-right: 10px solid white; }
 
 .big-icon img {
-  width: 100%; }
+  width: 60%; }
 
 .home-post-list .post-cat {
   opacity: 0.4;
@@ -680,17 +701,17 @@ footer.site-footer .footer-bottom .bottom-menu ul.menu li a:hover {
   background: rgba(255, 255, 255, 0.1); }
 
 .home-post-list .post-item-list a.post-item:hover .icon img {
-  transform: scale(1.22); }
+  transform: scale(1.1); }
 
 .home-post-list .post-item-list a.post-item:hover .content {
   padding-left: 20px; }
 
 .home-post-list .post-item-list a.post-item .icon {
   float: left;
-  width: 120px; }
+  width: 60px; }
 
 .home-post-list .post-item-list a.post-item .icon img {
-  width: 120px;
+  width: 60px;
   margin-right: 10px;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
@@ -699,7 +720,7 @@ footer.site-footer .footer-bottom .bottom-menu ul.menu li a:hover {
   transition: all 0.2s ease-in-out; }
 
 .home-post-list .post-item-list a.post-item .content {
-  margin-left: 130px;
+  margin-left: 70px;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
@@ -710,7 +731,7 @@ footer.site-footer .footer-bottom .bottom-menu ul.menu li a:hover {
   color: white;
   font-family: "Montserrat", "PingFangSC-Regular", "Microsoft YaHei", "WenQuanYi Micro Hei", serif;
   font-size: 1.4em;
-  font-weight: bold;
+  font-weight: 300;
   padding: 5px 0;
   line-height: 115%; }
 
