@@ -2,9 +2,8 @@
 
 footer.site-footer{
 	padding: 30px 0;
-	background: $black;
 	color: $primary-color;
-	border-top: 1px solid #666;
+	// border-top: 1px solid #666;
 	.footer-content{
 		padding: 4em 0;
 		.logo{
@@ -14,7 +13,7 @@ footer.site-footer{
 	}
 	.footer-desc{
 		opacity: 0.6;
-		font-family: $text-sans;
+		font-family: $text-serif;
 	}
 	.footer-logo-text{
 		opacity: 0.6;

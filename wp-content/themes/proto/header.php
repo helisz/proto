@@ -18,7 +18,7 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700|Source+Sans+Pro:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,600|Lato:300,400,700" rel="stylesheet">
 
     <?php wp_head(); ?>
 </head>
@@ -31,13 +31,14 @@
             <div class="container">
                 <nav class="navbar navbar-expand-sm p-0">
                     <div class="navbar-brand">
-                       <!--  <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
+                       <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
                             <a href="<?php echo esc_url( home_url( '/' )); ?>">
                                 <img src="<?php echo esc_attr(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
                             </a>
                         <?php else : ?>
                             <a class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>"><?php esc_url(bloginfo('name')); ?></a>
-                        <?php endif; ?> -->
+                        <?php endif; ?> 
+                        <!--
                         <a class="brand-logo" href="<?php echo esc_url( home_url( '/' )); ?>">
                             <div class="square">
                                 <img src="<?php echo get_site_url(); ?>/wp-content/uploads/2018/02/logo_shape1.svg">
@@ -49,6 +50,7 @@
                                 <img src="<?php echo get_site_url(); ?>/wp-content/uploads/2018/02/logo_shape3.svg">
                             </div>
                         </a>
+                        -->
 
                     </div>
                     <button class="navbar-toggler" style="background:transparent;" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">

@@ -65,14 +65,29 @@
   -o-animation: rotating 200s linear infinite;
   animation: rotating 200s linear infinite; }
 
+html {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#403c3c+0,191818+100 */
+  background: #403c3c;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #403c3c 0%, #191818 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #403c3c 0%, #191818 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #403c3c 0%, #191818 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#403c3c', endColorstr='#191818',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  background-attachment: fixed; }
+
 body {
-  background: #22282D;
+  background: transparent;
   color: #FFF;
-  font-size: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, "Source Sans Pro", Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif; }
+  font-size: 14px;
+  font-family: Lato, Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif; }
 
 .text-sans {
-  font-family: -apple-system, BlinkMacSystemFont, "Montserrat", Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif; }
+  font-family: Dosis, Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
+  letter-spacing: 0.1em; }
 
 .content-area {
   width: 100%; }
@@ -84,13 +99,20 @@ h1, h2, h3,
 h1.widget-title, h3.sidetitle {
   color: #FFF;
   border: none;
-  font-family: "Montserrat", "PingFangSC-Regular", "Microsoft YaHei", "WenQuanYi Micro Hei", serif; }
+  font-family: Dosis, Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif; }
 
 h1 {
   border: none; }
 
 h1.entry-title {
   border: none; }
+
+h3.subtitle {
+  font-size: 1em;
+  font-family: Dosis, Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  opacity: 0.4; }
 
 hr {
   border-color: #FFF;
@@ -100,7 +122,6 @@ a, a:hover, a:visited, a:focus {
   text-decoration: none; }
 
 #main, .widget {
-  background: #22282D;
   padding: 0px;
   border: 0;
   border-radius: 0; }
@@ -153,6 +174,41 @@ a, a:hover, a:visited, a:focus {
 
 .site-content {
   padding: 0 !important; }
+
+button.btn, .btn:not(:disabled):not(.disabled) {
+  outline: none !important; }
+
+button.btn.btn-default, .btn:not(:disabled):not(.disabled).btn-default {
+  background: #f88f88;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #f88f88 0%, #f36961 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #f88f88 0%, #f36961 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #f88f88 0%, #f36961 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f88f88', endColorstr='#f36961',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  color: white; }
+
+button.btn.btn-default:hover, button.btn.btn-default:active, button.btn.btn-default:focus, button.btn.btn-default:visited, .btn:not(:disabled):not(.disabled).btn-default:hover, .btn:not(:disabled):not(.disabled).btn-default:active, .btn:not(:disabled):not(.disabled).btn-default:focus, .btn:not(:disabled):not(.disabled).btn-default:visited {
+  color: white;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: #f88f88;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #f88f88 0%, #f36961 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #f88f88 0%, #f36961 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #f88f88 0%, #f36961 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f88f88', endColorstr='#f36961',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  opacity: 0.7; }
 
 button, a.button {
   color: white;
@@ -287,6 +343,9 @@ button.button-white:hover, a.button.button-white:hover {
   background: white;
   opacity: 0.6; }
 
+.site-header {
+  padding-top: 30px; }
+
 .mainmenu {
   text-align: right; }
 
@@ -363,16 +422,30 @@ button.button-white:hover, a.button.button-white:hover {
   top: 0px; }
 
 nav.navbar {
-  border-bottom: 1px solid #666;
   margin-bottom: 20px; }
 
 nav.navbar .navbar-brand {
   padding: 0;
   margin: 20px 0; }
 
+nav.navbar .navbar-brand a {
+  display: block; }
+
+nav.navbar .navbar-brand a img {
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  height: auto;
+  width: 180px; }
+
+nav.navbar .navbar-brand:hover img {
+  transform: scale(1.05); }
+
 nav.navbar .navbar-nav .nav-link {
   color: #FFF;
-  font-family: "Source Sans Pro", "PingFangSC-Regular", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-family: Lato, Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
   text-transform: uppercase; }
 
 header#masthead {
@@ -556,9 +629,7 @@ header#masthead.current-menu-item a, header#masthead #main-nav .current_page_ite
 
 footer.site-footer {
   padding: 30px 0;
-  background: #22282D;
-  color: #FFF;
-  border-top: 1px solid #666; }
+  color: #FFF; }
 
 footer.site-footer .footer-content {
   padding: 4em 0; }
@@ -569,7 +640,7 @@ footer.site-footer .footer-content .logo {
 
 footer.site-footer .footer-desc {
   opacity: 0.6;
-  font-family: "Montserrat", "PingFangSC-Regular", "Microsoft YaHei", "WenQuanYi Micro Hei", serif; }
+  font-family: Lato, Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif; }
 
 footer.site-footer .footer-logo-text {
   opacity: 0.6; }
@@ -629,7 +700,7 @@ footer.site-footer .footer-bottom .bottom-menu ul.menu li a:hover {
   opacity: 1; }
 
 .post-template h1 {
-  font-size: 2.4em;
+  font-size: 3.4em;
   line-height: 115%;
   font-weight: 300; }
 
@@ -666,8 +737,9 @@ footer.site-footer .footer-bottom .bottom-menu ul.menu li a:hover {
   color: black; }
 
 .home-page {
-  padding: 30px 0;
-  min-height: 600px; }
+  padding: 10px 0;
+  min-height: 600px;
+  margin: 0 15px; }
 
 .big-icon {
   padding: 0 20px 0 0;
@@ -676,17 +748,16 @@ footer.site-footer .footer-bottom .bottom-menu ul.menu li a:hover {
 .big-icon img {
   width: 60%; }
 
-.home-post-list .post-cat {
+.post-list .post-cat {
   opacity: 0.4;
   padding: 0 0 10px 0;
   font-weight: bold;
   text-transform: uppercase; }
 
-.home-post-list .post-item-list {
+.post-list .post-item-list {
   margin-bottom: 20px; }
 
-.home-post-list .post-item-list a.post-item {
-  margin: 0 -10px 0 -10px;
+.post-list .post-item-list a.post-item {
   display: block;
   background: transparent;
   overflow: hidden;
@@ -697,48 +768,183 @@ footer.site-footer .footer-bottom .bottom-menu ul.menu li a:hover {
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
 
-.home-post-list .post-item-list a.post-item:hover {
-  background: rgba(255, 255, 255, 0.1); }
+.post-list .post-item-list a.post-item .post-item-content {
+  width: 100%;
+  padding-bottom: 125%;
+  position: relative; }
 
-.home-post-list .post-item-list a.post-item:hover .icon img {
-  transform: scale(1.1); }
+@media (max-width: 575px) {
+  .post-list .post-item-list a.post-item .post-item-content {
+    padding-bottom: 20px; } }
 
-.home-post-list .post-item-list a.post-item:hover .content {
-  padding-left: 20px; }
+.post-list .post-item-list a.post-item .post-item-content .content-frame {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
 
-.home-post-list .post-item-list a.post-item .icon {
-  float: left;
-  width: 60px; }
-
-.home-post-list .post-item-list a.post-item .icon img {
-  width: 60px;
-  margin-right: 10px;
+.post-list .post-item-list a.post-item .post-item-content .content-frame .content {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
 
-.home-post-list .post-item-list a.post-item .content {
-  margin-left: 70px;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; }
-
-.home-post-list .post-item-list a.post-item .content .title {
+.post-list .post-item-list a.post-item .post-item-content .content-frame .content .title {
   color: white;
-  font-family: "Montserrat", "PingFangSC-Regular", "Microsoft YaHei", "WenQuanYi Micro Hei", serif;
-  font-size: 1.4em;
-  font-weight: 300;
+  font-family: Dosis, Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
+  font-size: 1.6em;
+  font-weight: 400;
   padding: 5px 0;
   line-height: 115%; }
 
-.home-post-list .post-item-list a.post-item .content .date {
-  opacity: 0.5;
+.post-list .post-item-list a.post-item .post-item-content .content-frame .content .date {
   color: white;
-  font-size: 0.8em;
-  text-transform: uppercase; }
+  font-size: 0.7em;
+  text-transform: uppercase;
+  margin-top: 6px; }
+
+.post-list .post-item-list a.post-item .post-item-content .content-frame .content-bg {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  opacity: 0.2;
+  border-radius: 5px;
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.6); }
+
+.post-list .post-item-list a.post-item .post-item-content .content-frame .home-gradient-bg {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  border-radius: 5px; }
+
+.post-list .post-item-list a.post-item .post-item-content .content-frame .home-gradient-bg.gradient-bg-1 {
+  background: #f88f88;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #f88f88 0%, #f36961 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #f88f88 0%, #f36961 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #f88f88 0%, #f36961 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f88f88', endColorstr='#f36961',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */ }
+
+.post-list .post-item-list a.post-item .post-item-content .content-frame .home-gradient-bg.gradient-bg-2 {
+  background: #ce7e7c;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #ce7e7c 0%, #c16866 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #ce7e7c 0%, #c16866 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #ce7e7c 0%, #c16866 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ce7e7c', endColorstr='#c16866',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */ }
+
+.post-list .post-item-list a.post-item .post-item-content .content-frame .home-gradient-bg.gradient-bg-3 {
+  background: #869282;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #869282 0%, #6a7666 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #869282 0%, #6a7666 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #869282 0%, #6a7666 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#869282', endColorstr='#6a7666',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */ }
+
+.post-list .post-item-list a.post-item .post-item-content .content-frame .home-gradient-bg.gradient-bg-4 {
+  background: #66756f;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #66756f 0%, #405a62 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #66756f 0%, #405a62 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #66756f 0%, #405a62 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66756f', endColorstr='#405a62',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */ }
+
+.post-list .post-item-list a.post-item:hover {
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.45); }
+
+.post-list .post-item-list a.post-item:hover .post-item-content .content-frame .content-bg {
+  transform: scale(1.05);
+  opacity: 0.05; }
+
+.post-list .post-item-list a.post-item:hover .post-item-content .content-frame .home-gradient-bg {
+  opacity: 1;
+  transform: scale(1.05);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4); }
+
+.post-item-list .post-item-link {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background: rgba(255, 255, 255, 0);
+  color: white;
+  display: block;
+  padding: 10px;
+  border-radius: 5px; }
+
+.post-item-list .post-item-link .title {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: white;
+  font-family: Dosis, Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
+  font-size: 1.3em;
+  font-weight: 400;
+  padding: 5px 0;
+  line-height: 115%; }
+
+.post-item-list .post-item-link .date {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: white;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  margin-top: 6px;
+  opacity: 0.6; }
+
+.post-item-list .post-item-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2); }
 
 /*# sourceMappingURL=maps/style.css.map */

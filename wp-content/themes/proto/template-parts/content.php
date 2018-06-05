@@ -18,12 +18,15 @@
 				<?php
 				if ( is_single() ) :
 					the_title( '<h1 class="entry-title">', '</h1>' );
+
 				else :
 					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 				endif;
 
 				if ( 'post' === get_post_type() ) : ?>
 				<div class="entry-meta">
+
+					<?php the_field('color'); ?>
 					<?php wp_bootstrap_starter_posted_on(); ?>
 				</div><!-- .entry-meta -->
 				<?php
@@ -31,7 +34,7 @@
 			</header><!-- .entry-header -->
 		</div>
 		<div class="col-md-4 col-md-push-8 post-thumbnail text-right">
-			<?php the_post_thumbnail(); ?>
+			<!-- <?php the_post_thumbnail(); ?> -->
 		</div>
 	</div>
 

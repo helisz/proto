@@ -1,21 +1,26 @@
-html{
 
+html{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#403c3c+0,191818+100 */
+	background: #403c3c; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #403c3c 0%, #191818 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, #403c3c 0%,#191818 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, #403c3c 0%,#191818 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#403c3c', endColorstr='#191818',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	background-attachment: fixed;
 }
 
 body{
-	background: $black;
+	background: transparent;
 	color: $primary-color;
-	font-size: 16px;
-	font-family: -apple-system, BlinkMacSystemFont, "Source Sans Pro", Roboto,
-             "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
-             SimSun, sans-serif;
+	font-size: 14px;
+	font-family: $text-serif;
 }
 
 .text-sans{	
-	font-family: -apple-system, BlinkMacSystemFont, "Montserrat", Roboto,
-             "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
-             SimSun, sans-serif;
+	font-family: $text-sans;	
+	letter-spacing: 0.1em;
 }
+
 
 
 .content-area{
@@ -40,6 +45,13 @@ h1{
 		border: none;
 	}
 }
+h3.subtitle{
+	font-size: 1em;
+	font-family: $text-sans;
+	font-weight: 600;
+	letter-spacing: 0.2em;
+	opacity: 0.4;
+}
 
 hr{
 	border-color: $primary-color;
@@ -51,7 +63,6 @@ a, a:hover, a:visited, a:focus{
 }
 
 #main, .widget{
-	background: $black;
 	padding: 0px;
 	border: 0;
 	border-radius: 0;
@@ -115,6 +126,19 @@ a, a:hover, a:visited, a:focus{
 	padding: 0!important;
 }
 
+button.btn, .btn:not(:disabled):not(.disabled){
+	outline: none !important;
+	&.btn-default{
+		@include gradient-bg-1;
+		color: white;
+		&:hover, &:active, &:focus, &:visited{
+			color: white;
+			@include transition(all 0.3s ease-in-out);
+			@include gradient-bg-1;
+			opacity: 0.7;
+		}
+	}
+}
 button, a.button{
 	color: white;
 	@include primary-gradient;
@@ -258,3 +282,5 @@ button, a.button{
 		}
 	}
 }
+
+

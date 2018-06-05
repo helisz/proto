@@ -1,6 +1,7 @@
 .home-page{
-	padding: 30px 0;
+	padding: 10px 0;
 	min-height: 600px;
+	margin: 0 15px;
 }
 
 .big-icon{
@@ -11,7 +12,7 @@
 	}
 }
 
-.home-post-list{
+.post-list{
 	.post-cat{
 		opacity: 0.4;
 		padding: 0 0 10px 0;
@@ -22,50 +23,131 @@
 	.post-item-list{
 		margin-bottom: 20px;
 		a.post-item{
-			margin: 0 -10px 0 -10px;
 			display: block;
 			background: transparent;
 			overflow: hidden;
 			padding: 10px;		
 			@include transition(all 0.2s ease-in-out);
-			&:hover{
-				background: rgba(255,255,255,0.1);
-				.icon img{
-					transform:scale(1.1);
-				}
-				.content{
-					padding-left: 20px;
-				}
-			}
+			.post-item-content{
+				width: 100%;
+				padding-bottom: 125%;
+				position: relative;
 
-			.icon {
-				float: left;
-				width: 60px;
-				img{
-					width: 60px;
-					margin-right: 10px;
-					@include transition(all 0.2s ease-in-out);
+				@media (max-width: 575px) {
+					padding-bottom: 20px;
 				}
+
+				.content-frame{
+					position: absolute;
+					top: 0; bottom: 0; left: 0; right: 0;
+					.content{
+						position: absolute;
+						bottom: 10px; left: 10px; right: 10px;
+						@include transition(all 0.2s ease-in-out);
+						.title {
+							color: white;
+							font-family: $text-sans;
+							font-size: 1.6em;
+							font-weight: 400;
+							padding: 5px 0;
+							line-height: 115%;
+						}
+						.date{
+							color: white;
+							font-size: 0.7em;
+							text-transform: uppercase;
+							margin-top: 6px;
+						}
+					}
+					.content-bg{
+						@include transition(all 0.2s ease-in-out);
+						position: absolute;
+						top: 0; bottom: 0; left: 0; right: 0;
+						background-position: center center;
+						-webkit-background-size: cover;
+						-moz-background-size: cover;
+						-o-background-size: cover;
+						background-size: cover;
+						-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+						filter: grayscale(100%);
+						opacity: 0.2;
+						border-radius: $border-radius;
+						box-shadow: 0px 5px 12px rgba(0,0,0,0.6);
+
+					}
+					.home-gradient-bg{				
+						@include transition(all 0.2s ease-in-out);
+						position: absolute;
+						top: 0; bottom: 0; left: 0; right: 0;		
+						opacity: 0;
+						border-radius: $border-radius;
+
+						&.gradient-bg-1{
+							@include gradient-bg-1;
+						}
+						&.gradient-bg-2{
+							@include gradient-bg-2;
+						}
+						&.gradient-bg-3{
+							@include gradient-bg-3;
+						}
+						&.gradient-bg-4{
+							@include gradient-bg-4;
+						}
+					}	
+				}
+
+				
 			}
-			.content{
-				margin-left: 70px;
-				@include transition(all 0.2s ease-in-out);
-				.title {
-					color: white;
-					font-family: $text-sans;
-					font-size: 1.4em;
-					font-weight: 300;
-					padding: 5px 0;
-					line-height: 115%;
+			&:hover{
+				.post-item-content{
+					.content-frame{
+						.content-bg{
+							transform: scale(1.05);
+							opacity: 0.05;
+						}
+						.home-gradient-bg{
+							opacity: 1;
+							transform: scale(1.05);
+							box-shadow: 0px 5px 20px rgba(0,0,0,0.4);
+						}
+					}
 				}
-				.date{
-					opacity: 0.5;
-					color: white;
-					font-size: 0.8em;
-					text-transform: uppercase;
-				}
+				box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.45);
 			}
 		}
-		
+
+	}
+}
+
+.post-item-list{
+	.post-item-link{
+		@include transition(all 0.2s ease-in-out);
+		background: rgba(255,255,255,0);
+		color: white;
+		display: block;
+		padding: 10px;
+		border-radius: $border-radius;
+		.title {
+			@include transition(all 0.2s ease-in-out);
+			color: white;
+			font-family: $text-sans;
+			font-size: 1.3em;
+			font-weight: 400;
+			padding: 5px 0;
+			line-height: 115%;
+		}
+		.date{
+			@include transition(all 0.2s ease-in-out);
+			color: white;
+			font-size: 0.7em;
+			text-transform: uppercase;
+			margin-top: 6px;
+			opacity: 0.6;
+		}
+		&:hover{
+			background: rgba(255,255,255,0.1);
+			box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+		}
 	}
 }

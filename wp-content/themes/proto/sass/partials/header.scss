@@ -1,4 +1,8 @@
 // header styles
+.site-header{
+	padding-top: 30px;
+}
+
 .mainmenu{
 	text-align: right;
 	#submenu{
@@ -79,18 +83,24 @@
 }
 
 nav.navbar{
-	border-bottom: 1px solid #666;
+	// border-bottom: 1px solid #666;
 	margin-bottom: 20px;
 	.navbar-brand{
 		padding: 0;
 		margin: 20px 0;
-		// a{
-			// 	display: block;
-			// 	img{
-				// 		height: auto;
-				// 		width: 160px;
-				// 	}
-				// }
+			a{
+				display: block;
+				img{
+						@include transition(all 0.1s ease-in-out);
+						height: auto;
+						width: 180px;
+					}
+				}
+				&:hover{
+					img{
+						transform: scale(1.05);
+					}
+				}
 			}
 			.navbar-nav{
 				.nav-link{
