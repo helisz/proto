@@ -775,7 +775,8 @@ footer.site-footer .footer-bottom .bottom-menu ul.menu li a:hover {
 
 @media (max-width: 575px) {
   .post-list .post-item-list a.post-item .post-item-content {
-    padding-bottom: 20px; } }
+    padding-bottom: 20px;
+    min-height: 160px; } }
 
 .post-list .post-item-list a.post-item .post-item-content .content-frame {
   position: absolute;
